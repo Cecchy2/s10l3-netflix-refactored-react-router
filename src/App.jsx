@@ -5,6 +5,7 @@ import Galleria from "./components/Gallerie";
 import { Container } from "react-bootstrap";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import TvShows from "./components/TvShows";
+import MovieDetails from "./components/MovieDetails";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Galleria />} />
             <Route path="/TvShows" element={<TvShows />} />
+            <Route path="/TvShows/Details/:movieId" element={<MovieDetails />} />
           </Routes>
         </Container>
       </BrowserRouter>

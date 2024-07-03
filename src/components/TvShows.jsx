@@ -7,14 +7,6 @@ import { useEffect, useState } from "react";
 const bcs = "http://www.omdbapi.com/?apikey=64766599&s=better call saul";
 
 const TvShows = () => {
-  /* state = {
-        movies1: [],
-        movies2: [],
-        movies3: [],
-        loading1: true,
-        loading2: true,
-        loading3: true,
-      }; */
   const [tvShow1, setTvShow1] = useState([]);
   const [loading1, setLoading1] = useState(true);
 
