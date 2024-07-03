@@ -12,19 +12,19 @@ const MyNavBar = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#link">TV Shows</Nav.Link>
+            <Nav.Link href="/">Home</Nav.Link>
+            <Nav.Link href="/TvShows">TV Shows</Nav.Link>
             <Nav.Link href="#link">Movies</Nav.Link>
             <Nav.Link href="#link">Recently Added</Nav.Link>
             <Nav.Link href="#link">My List</Nav.Link>
           </Nav>
-          <div class="d-flex align-items-center ms-auto">
+          <div className="d-flex align-items-center ms-auto">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="15"
               height="15"
               fill="white"
-              class="bi bi-search mx-3"
+              className="bi bi-search mx-3"
               viewBox="0 0 16 16"
             >
               <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
