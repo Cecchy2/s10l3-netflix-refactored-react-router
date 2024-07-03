@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { Col, Row, Spinner } from "react-bootstrap";
+import { Card, Col, Row, Spinner } from "react-bootstrap";
 import MyFooter from "./MyFooter";
 
 const MovieDetails = () => {
@@ -37,6 +37,7 @@ const MovieDetails = () => {
       if (response.ok) {
         const comments = await response.json();
         console.log(comments);
+        setReviews(comments);
       }
     } catch (err) {
       console.log(err);
@@ -55,12 +56,28 @@ const MovieDetails = () => {
         movieDetails && (
           <div className="text-white mt-5">
             <Row>
-              <Col xs={6}>
+              <Col xs={4}>
                 <img src={movieDetails.Poster} alt={movieDetails.Title} />
               </Col>
-              <Col xs={3} className="mt-5">
+              <Col xs={4}>
                 <h1>{movieDetails.Title}</h1>
                 <p>{movieDetails.Plot}</p>
+              </Col>
+              <Col xs={4}>
+                <h4 className="display-6">Recensioni:</h4>
+                {reviews.lenght > 0 ? (
+                  reviews.map((review) => (
+                    <Card key={review._id}>
+                      <Card.Body>
+                        <Card.Title>{review.elementId}</Card.Title>
+                        <Card.Text>{review.comment}</Card.Text>
+                        <Card.Text>Voto {review.rate}</Card.Text>
+                      </Card.Body>
+                    </Card>
+                  ))
+                ) : (
+                  <p>Ancora nessuna recensione</p>
+                )}
               </Col>
             </Row>
             <MyFooter />
