@@ -65,7 +65,7 @@ const MovieDetails = () => {
               </Col>
               <Col xs={4}>
                 <h4 className="display-6">Recensioni:</h4>
-                {reviews.lenght > 0 ? (
+                {reviews.length > 0 ? (
                   reviews.map((review) => (
                     <Card key={review._id}>
                       <Card.Body>
