@@ -1,6 +1,7 @@
 import { Container, Nav, NavDropdown, Navbar } from "react-bootstrap";
 import netflixLogo from "../logos/netflix_logo.png";
 import avatar from "../logos/avatar.png";
+import { NavLink } from "react-router-dom";
 
 const MyNavBar = () => {
   return (
@@ -12,11 +13,21 @@ const MyNavBar = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="/">Home</Nav.Link>
-            <Nav.Link href="/TvShows">TV Shows</Nav.Link>
-            <Nav.Link href="#link">Movies</Nav.Link>
-            <Nav.Link href="#link">Recently Added</Nav.Link>
-            <Nav.Link href="#link">My List</Nav.Link>
+            <NavLink to="/" className="nav-link">
+              Home
+            </NavLink>
+            <NavLink to="/TvShows" className="nav-link">
+              TV Shows
+            </NavLink>
+            <NavLink to="#link" className="nav-link">
+              Movies
+            </NavLink>
+            <NavLink to="#link" className="nav-link">
+              Recently Added
+            </NavLink>
+            <NavLink to="#link" className="nav-link">
+              My List
+            </NavLink>
           </Nav>
           <div className="d-flex align-items-center ms-auto">
             <svg
